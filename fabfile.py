@@ -1,7 +1,7 @@
 import os
 from fabric.api import env, run, local
 
-def millswf():
+def swfmill():
     """
     build library.swf with swfmill
     """
@@ -15,17 +15,19 @@ def haxe():
     cmd = "cd src; haxe compile.hxml"
     local(cmd, capture=False)
 
-def swf():
+def all():
     """
     build a complete swf using swfmill and haxe, and run it
     """
-    millswf()
+    swfmill()
     haxe()
 
-#def play_swf():
-#    """
-#    use the debug player to execute test.swf
-#    """
-#    cmd = "/Users/idm/Applications/Flash\ Player.app/Contents/MacOS/Flash\ Player /Users/idm/Code/notequal/zoodown/var/sfx/test.swf"
-#    os.system(cmd)
+def invoke():
+    """
+    use the debug player to execute test.swf
+    """
+    #swf_file = "/Users/idm/Code/notequal/zoodown/var/sfx/test.swf"
+    swf_file = "/Users/idm/Code/notequal/bobble_studio/var/bs.swf"
+    cmd = "/Users/idm/Applications/Flash\ Player.app/Contents/MacOS/Flash\ Player %s" % swf_file
+    os.system(cmd)
 

@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <movie version="9" width="800" height="600" framerate="30">
     <library>
-        <sound id="Tick" import="/Users/idm/Code/notequal/zoodown/usr/theme/0.1/static_html/sounds/sound_tick.mp3"/>
-        <sound id="Toggle" import="/Users/idm/Code/notequal/zoodown/usr/theme/0.1/static_html/sounds/sound_toggle.mp3"/>
+        <bitmap id="P1_head" import="usr/ian-head.png"/>
+        <bitmap id="P1_body" import="usr/ian-body.png"/>
     </library>
     <frame>
-        <place id="Tick"/>
     </frame>
 </movie>

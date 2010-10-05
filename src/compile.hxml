@@ -2,5 +2,5 @@
 -swf-version 9
 -main BobbleStudio
 #-main Adobe
-#-swf-lib ../var/library.swf
+-swf-lib ../var/library.swf
 -debug

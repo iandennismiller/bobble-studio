@@ -1,0 +1,40 @@
+<html>
+<head><title>haXe Flash</title>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"></script>
+    
+    <script language="JavaScript">
+        var jsReady = false;
+        var my_movie;
+        function isReady() {
+            return jsReady;
+        }
+        function pageInit() {
+            jsReady = true;
+            params = {allowScriptAccess:'always'};
+            //atts = {id:'haxe',name:'haxe'};
+            atts = {id:'haxe'};
+
+            swfobject.embedSWF(
+                "../var/bs.swf",
+                "mycontent", 
+                "640", "240", 
+                "9.0.0",
+                null, null, params, atts
+            );
+
+            if (document.getElementById) {
+                my_movie = document.getElementById('haxe');
+            }
+            else {
+                alert("whoah");
+            }
+        }
+        </script>
+        
+</head>
+<body bgcolor="#dddddd" onload="pageInit();">
+    <div id="mycontent"></div>
+    <a href="#" onclick="my_movie.play_click(); return false;">click!</a><br/>
+    <a href="#" onclick="my_movie.play_hover(); return false;">hover!!</a>
+</body>
+</html>

@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<movie version="9" width="800" height="600" framerate="30">
+<movie version="9" width="480" height="390" framerate="30">
     <library>
         <bitmap id="P1_head" import="usr/ian-head.png"/>
         <bitmap id="P1_body" import="usr/ian-body.png"/>
+        <bitmap id="Scene1" import="usr/scene1.png"/>
     </library>
     <frame>
     </frame>

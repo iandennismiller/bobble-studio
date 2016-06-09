@@ -10,11 +10,14 @@ swf:
 
 haxe:
 	cd src && haxe compile.hxml
+	cp src/test.html var/index.html
 
 open:
-	$(FLASH) $(SWF)
+	# $(FLASH) $(SWF)
+	open var/index.html
 
 requirements:
 	sudo -u admin brew install swfmill
+	sudo -u admin brew install haxe
 
-.PHONY: all swf haxe open
+.PHONY: all swf haxe open requirements

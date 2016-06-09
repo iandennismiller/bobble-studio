@@ -1,7 +1,8 @@
 <html>
-<head><title>haXe Flash</title>
+<head>
+    <title>haXe Flash</title>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"></script>
-    
+
     <script language="JavaScript">
         var jsReady = false;
         var my_movie;
@@ -15,9 +16,9 @@
             atts = {id:'haxe'};
 
             swfobject.embedSWF(
-                "../var/bs.swf",
-                "mycontent", 
-                "640", "240", 
+                "bs.swf",
+                "mycontent",
+                "570", "480",
                 "9.0.0",
                 null, null, params, atts
             );
@@ -29,12 +30,22 @@
                 alert("whoah");
             }
         }
-        </script>
-        
+    </script>
+    <style type="text/css">
+    #container {
+        margin: 0px auto;
+        width: 570px;
+    }
+    </style>
 </head>
 <body bgcolor="#dddddd" onload="pageInit();">
-    <div id="mycontent"></div>
-    <a href="#" onclick="my_movie.play_click(); return false;">click!</a><br/>
-    <a href="#" onclick="my_movie.play_hover(); return false;">hover!!</a>
+    <div id="container">
+        <div id="mycontent"></div>
+<!--     <div>
+        <a href="#" onclick="my_movie.play_click(); return false;">click!</a><br/>
+        <a href="#" onclick="my_movie.play_hover(); return false;">hover!!</a>
+    </div>
+-->
+    </div>
 </body>
 </html>

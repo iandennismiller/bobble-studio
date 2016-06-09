@@ -1,23 +1,26 @@
 # bobble-studio
 
-FLASH=/Users/idm/Applications/Flash\ Player.app/Contents/MacOS/Flash\ Player
-SWF=/Users/idm/Code/notequal/bobble_studio/var/bs.swf
+INSTALL_PATH=/Users/idm/Work/iandennismiller/blog/content/assets/bobble-studio
 
-all: swf haxe
+all: haxe
+	@echo "done"
 
 swf:
 	swfmill simple src/library.xml var/library.swf
 
-haxe:
+haxe: swf
 	cd src && haxe compile.hxml
+	rm var/library.swf
 	cp src/test.html var/index.html
 
 open:
-	# $(FLASH) $(SWF)
 	open var/index.html
 
 requirements:
 	sudo -u admin brew install swfmill
 	sudo -u admin brew install haxe
 
-.PHONY: all swf haxe open requirements
+install:
+	cp var/bs.swf $(INSTALL_PATH)
+
+.PHONY: all swf haxe open requirements install
